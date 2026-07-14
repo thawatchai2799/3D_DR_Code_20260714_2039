@@ -1,0 +1,390 @@
+DR Code 3D Class-Level Patterns (Latin cubes of order 3)
+============================================================
+Total: 24 class patterns
+Each expands to (9!)^3 = 47,784,725,839,872,000 full DR templates
+Grand total: 1,146,833,420,156,928,000
+
+Pattern #1:
+  Layer z=0:
+    A B C 
+    B C A 
+    C A B 
+
+  Layer z=1:
+    B C A 
+    C A B 
+    A B C 
+
+  Layer z=2:
+    C A B 
+    A B C 
+    B C A 
+
+Pattern #2:
+  Layer z=0:
+    A B C 
+    B C A 
+    C A B 
+
+  Layer z=1:
+    C A B 
+    A B C 
+    B C A 
+
+  Layer z=2:
+    B C A 
+    C A B 
+    A B C 
+
+Pattern #3:
+  Layer z=0:
+    A B C 
+    C A B 
+    B C A 
+
+  Layer z=1:
+    B C A 
+    A B C 
+    C A B 
+
+  Layer z=2:
+    C A B 
+    B C A 
+    A B C 
+
+Pattern #4:
+  Layer z=0:
+    A B C 
+    C A B 
+    B C A 
+
+  Layer z=1:
+    C A B 
+    B C A 
+    A B C 
+
+  Layer z=2:
+    B C A 
+    A B C 
+    C A B 
+
+Pattern #5:
+  Layer z=0:
+    A C B 
+    B A C 
+    C B A 
+
+  Layer z=1:
+    B A C 
+    C B A 
+    A C B 
+
+  Layer z=2:
+    C B A 
+    A C B 
+    B A C 
+
+Pattern #6:
+  Layer z=0:
+    A C B 
+    B A C 
+    C B A 
+
+  Layer z=1:
+    C B A 
+    A C B 
+    B A C 
+
+  Layer z=2:
+    B A C 
+    C B A 
+    A C B 
+
+Pattern #7:
+  Layer z=0:
+    A C B 
+    C B A 
+    B A C 
+
+  Layer z=1:
+    B A C 
+    A C B 
+    C B A 
+
+  Layer z=2:
+    C B A 
+    B A C 
+    A C B 
+
+Pattern #8:
+  Layer z=0:
+    A C B 
+    C B A 
+    B A C 
+
+  Layer z=1:
+    C B A 
+    B A C 
+    A C B 
+
+  Layer z=2:
+    B A C 
+    A C B 
+    C B A 
+
+Pattern #9:
+  Layer z=0:
+    B A C 
+    A C B 
+    C B A 
+
+  Layer z=1:
+    A C B 
+    C B A 
+    B A C 
+
+  Layer z=2:
+    C B A 
+    B A C 
+    A C B 
+
+Pattern #10:
+  Layer z=0:
+    B A C 
+    A C B 
+    C B A 
+
+  Layer z=1:
+    C B A 
+    B A C 
+    A C B 
+
+  Layer z=2:
+    A C B 
+    C B A 
+    B A C 
+
+Pattern #11:
+  Layer z=0:
+    B A C 
+    C B A 
+    A C B 
+
+  Layer z=1:
+    A C B 
+    B A C 
+    C B A 
+
+  Layer z=2:
+    C B A 
+    A C B 
+    B A C 
+
+Pattern #12:
+  Layer z=0:
+    B A C 
+    C B A 
+    A C B 
+
+  Layer z=1:
+    C B A 
+    A C B 
+    B A C 
+
+  Layer z=2:
+    A C B 
+    B A C 
+    C B A 
+
+Pattern #13:
+  Layer z=0:
+    B C A 
+    A B C 
+    C A B 
+
+  Layer z=1:
+    A B C 
+    C A B 
+    B C A 
+
+  Layer z=2:
+    C A B 
+    B C A 
+    A B C 
+
+Pattern #14:
+  Layer z=0:
+    B C A 
+    A B C 
+    C A B 
+
+  Layer z=1:
+    C A B 
+    B C A 
+    A B C 
+
+  Layer z=2:
+    A B C 
+    C A B 
+    B C A 
+
+Pattern #15:
+  Layer z=0:
+    B C A 
+    C A B 
+    A B C 
+
+  Layer z=1:
+    A B C 
+    B C A 
+    C A B 
+
+  Layer z=2:
+    C A B 
+    A B C 
+    B C A 
+
+Pattern #16:
+  Layer z=0:
+    B C A 
+    C A B 
+    A B C 
+
+  Layer z=1:
+    C A B 
+    A B C 
+    B C A 
+
+  Layer z=2:
+    A B C 
+    B C A 
+    C A B 
+
+Pattern #17:
+  Layer z=0:
+    C A B 
+    A B C 
+    B C A 
+
+  Layer z=1:
+    A B C 
+    B C A 
+    C A B 
+
+  Layer z=2:
+    B C A 
+    C A B 
+    A B C 
+
+Pattern #18:
+  Layer z=0:
+    C A B 
+    A B C 
+    B C A 
+
+  Layer z=1:
+    B C A 
+    C A B 
+    A B C 
+
+  Layer z=2:
+    A B C 
+    B C A 
+    C A B 
+
+Pattern #19:
+  Layer z=0:
+    C A B 
+    B C A 
+    A B C 
+
+  Layer z=1:
+    A B C 
+    C A B 
+    B C A 
+
+  Layer z=2:
+    B C A 
+    A B C 
+    C A B 
+
+Pattern #20:
+  Layer z=0:
+    C A B 
+    B C A 
+    A B C 
+
+  Layer z=1:
+    B C A 
+    A B C 
+    C A B 
+
+  Layer z=2:
+    A B C 
+    C A B 
+    B C A 
+
+Pattern #21:
+  Layer z=0:
+    C B A 
+    A C B 
+    B A C 
+
+  Layer z=1:
+    A C B 
+    B A C 
+    C B A 
+
+  Layer z=2:
+    B A C 
+    C B A 
+    A C B 
+
+Pattern #22:
+  Layer z=0:
+    C B A 
+    A C B 
+    B A C 
+
+  Layer z=1:
+    B A C 
+    C B A 
+    A C B 
+
+  Layer z=2:
+    A C B 
+    B A C 
+    C B A 
+
+Pattern #23:
+  Layer z=0:
+    C B A 
+    B A C 
+    A C B 
+
+  Layer z=1:
+    A C B 
+    C B A 
+    B A C 
+
+  Layer z=2:
+    B A C 
+    A C B 
+    C B A 
+
+Pattern #24:
+  Layer z=0:
+    C B A 
+    B A C 
+    A C B 
+
+  Layer z=1:
+    B A C 
+    A C B 
+    C B A 
+
+  Layer z=2:
+    A C B 
+    C B A 
+    B A C 
+
