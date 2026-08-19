@@ -1,0 +1,3 @@
+# No third-party dependencies.
+# Both verification scripts use only the Python standard library and require
+# Python 3.9 or later.
