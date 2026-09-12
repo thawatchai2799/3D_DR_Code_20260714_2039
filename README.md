@@ -7,11 +7,11 @@ Reproduces every numerical and structural claim in
 > T. Chomsiri and W. Sriphum,
 > *Generalizing DR Code to Three Dimensions: Combinatorial Structure,
 > Group-Theoretic Analysis, and Storage Implications of the 3x3x3 DR Code*,
-> Mathematics (MDPI), manuscript mathematics-4471756, major revision.
+> Mathematics (MDPI), manuscript mathematics-4544390 (revised version).
 
 ## Requirements
 
-Python 3.9 or later. Both scripts use the standard library only, so there is
+Python 3.9 or later. All three scripts use the standard library only, so there is
 nothing to install.
 
 ## Run
@@ -26,11 +26,31 @@ or individually
 ```
 python3 verify_3d_recovery.py
 python3 verify_3d_group.py
+python3 verify_3d_round2.py
 ```
 
-Combined runtime is under a minute. Each script compares every value it
+Combined runtime is about a minute. Each script compares every value it
 computes against the figure quoted in the paper, prints `OK` or `MISMATCH`
 for each, and exits with status 1 if anything fails to reproduce.
+
+## What changed in the second revision (round 2)
+
+`verify_3d_round2.py` adds the checks introduced in the second revision of the
+paper, without modifying the two original scripts:
+
+| check | paper |
+|---|---|
+| the non-role-balanced template of Corollary 1 recovers all 36 damage cases (erase-and-XOR) | Corollary 1 |
+| 40 partitions into coordinate transversals when the role condition is dropped | Remark 1 |
+| 27 parity transversals and 21 partitions for the canonical role pattern rho_0, and 21 for every one of the 24 patterns | Theorem 2 |
+| the 21 partitions printed as the certificate of Appendix A | Appendix A |
+| 24 Latin cubes = 12 Latin squares x 2 discordant symbol-shifts | Section 2.2 |
+
+Composition convention: `verify_3d_group.py` composes permutations from left to
+right (`compose(a, b)` applies `a` first and then `b`), which is the convention
+stated in the paper and used by GAP; under this convention
+`sigma_Rz sigma_Cx sigma_Rz^-1 = sigma_Cy^2`. Under right-to-left composition the
+same identity reads `sigma_Rz sigma_Cx sigma_Rz^-1 = sigma_Cy`.
 
 ## What changed in the major revision
 
