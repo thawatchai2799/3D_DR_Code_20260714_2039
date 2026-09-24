@@ -7,7 +7,9 @@ Reproduces every numerical and structural claim in
 > T. Chomsiri and W. Sriphum,
 > *Generalizing DR Code to Three Dimensions: Combinatorial Structure,
 > Group-Theoretic Analysis, and Storage Implications of the 3x3x3 DR Code*,
-> Mathematics (MDPI), manuscript mathematics-4544390 (revised version).
+> Submitted to Symmetry (MDPI), Special Issue "Symmetry and Asymmetry in Computer Algorithms:
+> Properties and Applications". The manuscript was previously reviewed at Mathematics (MDPI)
+> as mathematics-4544390.
 
 ## Requirements
 

@@ -34,8 +34,8 @@ Contents
            a counterexample built from the role pattern of Figure 2
   Part 2   The criterion of Theorem 1, checked against the decoder
   Part 3   An explicit DR-recoverable template that decodes all 36 cases
-  Part 4   How rare recoverability is among the 24 x (9!)^3 templates of the
-           previous version
+  Part 4   How rare recoverability is among the 24 x (9!)^3 role-balanced
+           templates with free labelling
   Part 5   The count |V*_3D| = 24 x 21 x 9! = 182,891,520 by two methods
   Part 6   Orbits under G: every stabiliser trivial, 141,120 orbits
   Part 7   Storage figures of Section 6.1
@@ -265,7 +265,7 @@ note("every one of the 36 damage cases was erased and decoded")
 # Part 4.  Rarity among the old count
 # ---------------------------------------------------------------------------
 
-heading("Part 4.  Recoverability among the 24 x (9!)^3 templates of the old Theorem 1")
+heading("Part 4.  Recoverability among the 24 x (9!)^3 role-balanced templates with free labelling")
 
 rng = random.Random(12345)
 N_SAMPLE = 20000
@@ -394,7 +394,7 @@ def partitions_by_pairing(role):
 p2 = partitions_by_pairing(role_std)
 check("partitions by an independent cell-pairing search", p2, 21)
 check("index maps per role pattern = 21 x 9!", p2 * factorial(9), 7620480, comma)
-note(f"previous version reported 24 x (9!)^3 = {24 * factorial(9) ** 3:,}")
+note(f"for comparison, role-balanced templates with free labelling number 24 x (9!)^3 = {24 * factorial(9) ** 3:,}")
 note(f"ratio of the corrected count to it: {TOTAL / (24 * factorial(9) ** 3):.3e}")
 
 # (c) the larger set of Remark 1: templates satisfying criterion (2) only, with

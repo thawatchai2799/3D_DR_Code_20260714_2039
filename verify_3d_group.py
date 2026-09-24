@@ -120,8 +120,8 @@ check("every rod lies inside exactly two slabs",
 
 ROLE_PATTERNS = enumerate_role_patterns()
 check("number of role patterns (Latin cubes of order 3)", len(ROLE_PATTERNS), 24)
-note("the count is established here by exhaustive search; the paper no longer")
-note("attributes it to an OEIS entry")
+note("the count is established here by exhaustive search; the paper proves it in")
+note("Section 2.2 and cites OEIS A098679 and McKay-Wanless (2008)")
 
 check("every role pattern satisfies all 27 line constraints",
       all(sorted(w[INDEX[x]] for x in L) == [0, 1, 2]
