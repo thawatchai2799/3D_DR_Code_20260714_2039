@@ -139,10 +139,23 @@ The role-level and group-theoretic results.
 | `verify_3d_recovery.py` | erasure model, decoder, enumeration, orbits, storage |
 | `verify_3d_group.py` | role patterns, generators, group structure, Table 2, Burnside |
 | `DR27.py` | the role-pattern enumerator of the submitted version, kept for the record |
-| `run_all.sh`, `run_all.bat` | run both verification scripts in order |
+| `verify_3d_round2.py` | checks added in the second revision: Corollary 1 template, 40 partitions of Remark 1, 27/21 for every role pattern, Appendix A certificate, 24 = 12 x 2 |
+| `run_all.sh`, `run_all.bat` | run the three verification scripts in order |
+| `figures/` | the ten figures of the paper, each as a 600-dpi PNG and as a PDF (Figures 5, 6 and 9 are vector) |
 | `requirements.txt` | records that there are no dependencies |
 | `LICENSE` | MIT |
 | `README.md` | this document |
+
+## Figures
+
+The `figures/` directory holds the ten figures of the manuscript as submitted to
+Symmetry (manuscript file v21), named `Figure_01_cube` to `Figure_10_2D_vs_3D`.
+Every figure is provided as a 600-dpi PNG, identical to the image embedded in the
+manuscript, and as a PDF; Figures 5, 6 and 9 are vector PDFs produced by
+matplotlib, the others are the PNG embedded losslessly. Figures 5 and 6 were
+redrawn for the Symmetry submission so that all block diagrams share one
+style (role colours A blue, B red, C green; erased blocks grey); their content
+is unchanged.
 
 ## Licence
 
