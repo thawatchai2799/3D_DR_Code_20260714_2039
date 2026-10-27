@@ -45,6 +45,12 @@ main scripts:
 | 27 parity transversals and 21 partitions for the canonical role pattern rho_0, and 21 for every one of the 24 patterns | Theorem 2 |
 | the 21 partitions printed as the certificate of Appendix A | Appendix A |
 | 24 Latin cubes = 12 Latin squares x 2 discordant symbol-shifts | Section 2.2 |
+| the stabiliser of rho_0 has order 54 = 9 x 6 (sum-zero shifts x axis permutations), splits the 21 partitions into orbits of sizes 3 and 18, the three single-direction partitions are rows 1, 11, 21 of Table A1, and 141,120 = 20,160 + 120,960 | Proposition 2, Corollary 3 |
+| every parity transversal of rho_0 is an affine line (nine in each of three directions), the 21 partitions split 3 + 18 by direction, and 21 equals the number of tilings of the 3x3x3 array by 1x1x3 rods (1 + 12 + 8) | Lemma 3, Theorem 2(b) |
+| the canonical form (lexicographic minimum over the 1,296 images under G, and over the 48 images under O_h) is invariant on a sample, and its wall-clock cost per template is measured and printed together with the Python version and platform; about 1 ms under G and 0.03 ms under O_h in pure Python on a single core of a current x86-64 processor | Section 6.5 |
+| the 12 Latin squares of order 3 are the affine squares sx + ty + c, one orbit under the planar group of order 72 and three orbits of size 4 under D_4; the 72 Graeco-Latin pairs are those with (s', t') != +-(s, t) and form one free orbit | Lemma 4 |
+| the 504 pairs (role pattern, partition) form two orbits under G x S_3 (sizes 72 and 432), so the templates form exactly two classes under G x S_3 x S_9, of sizes 72 x 9! and 432 x 9! | Corollary 4 |
+| damage beyond the 36 designed cases, for every (role pattern, partition): two rods decodable in 162 of 351 pairs (135 coplanar + 27 others), rod + slab in 54 of 243, two slabs never, k random cells with probability C(9,k) 3^k / C(27,k) (100%, 92.3%, 77.5%, ... for k = 1, 2, 3, ...) | Section 6.7 |
 
 Composition convention: `verify_3d_group.py` composes permutations from left to
 right (`compose(a, b)` applies `a` first and then `b`), which is the convention
@@ -96,7 +102,8 @@ The erasure model and the enumeration against it.
 - **Part 3** constructs an explicit DR-recoverable template, prints it, erases
   each of the 36 damage cases and decodes them all.
 - **Part 4** samples 20,000 templates that satisfy the role-level condition only and
-  finds none that decodes all 36 cases.
+  finds none that decodes all 36 cases (a sanity check; the paper quotes only the
+  exact fraction 1.6 x 10^-10).
 - **Part 5** counts the DR-recoverable templates by two unrelated methods,
   exact cover by parity transversals and a cell-pairing search, both giving
   21 partitions per role pattern and hence `24 x 21 x 9! = 182,891,520`, and
@@ -137,7 +144,7 @@ The role-level and group-theoretic results.
 | `verify_3d_recovery.py` | erasure model, decoder, enumeration, orbits, storage |
 | `verify_3d_group.py` | role patterns, generators, group structure, Table 2, Burnside |
 | `DR27.py` | the original role-pattern enumerator (role level only), kept for the record |
-| `verify_3d_round2.py` | additional checks: Corollary 1 template, 40 partitions of Remark 1, 27/21 for every role pattern, Appendix A certificate, 24 = 12 x 2 |
+| `verify_3d_round2.py` | additional checks: Corollary 1 template, 40 partitions of Remark 1, 27/21 for every role pattern, Appendix A certificate, 24 = 12 x 2, stabiliser of order 54 and the 3 + 18 orbit split (Proposition 2), transversals = affine lines and the rod-tiling count 21 (Lemma 3, Theorem 2(b)), measured cost of the canonical form (Section 6.5), Lemma 4, Corollary 4 and the damage statistics of Section 6.7 |
 | `run_all.sh`, `run_all.bat` | run the three verification scripts in order |
 | `figures/` | the ten figures of the paper, each as a 600-dpi PNG and as a PDF (Figures 5, 6 and 9 are vector) |
 | `requirements.txt` | records that there are no dependencies |
@@ -146,11 +153,11 @@ The role-level and group-theoretic results.
 
 ## Figures
 
-The `figures/` directory holds the ten figures of the manuscript submitted to
-*Symmetry*, named `Figure_01_cube` to `Figure_10_2D_vs_3D`.
+The `figures/` directory holds the nine figures of the manuscript submitted to
+*Symmetry*, named `Figure_01_cube` to `Figure_09_storage`.
 Every figure is provided as a 600-dpi PNG, identical to the image embedded in the
 manuscript, and as a PDF; Figures 5, 6 and 9 are vector PDFs produced by
-matplotlib, the others are the PNG embedded losslessly. Figures 5 and 6 were
+matplotlib (as is Figure 8), the others are the PNG embedded losslessly. Figures 5 and 6 were
 redrawn for the Symmetry submission so that all block diagrams share one
 style (role colours A blue, B red, C green; erased blocks grey); their content
 is unchanged.
