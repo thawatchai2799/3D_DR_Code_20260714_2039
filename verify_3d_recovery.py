@@ -8,11 +8,10 @@ Reproduces every recoverability and enumeration claim in
     T. Chomsiri and W. Sriphum,
     "Generalizing DR Code to Three Dimensions: Combinatorial Structure,
      Group-Theoretic Analysis, and Storage Implications of the 3x3x3 DR Code"
-    (Mathematics, manuscript mathematics-4471756, major revision)
+    (submitted to Symmetry, 2026).
 
-and answers requirement (iv) of the third referee report: every claimed
-damage case is actually erased and decoded, rather than inferred from a
-combinatorial surrogate.
+Every claimed damage case is actually erased and decoded, rather than
+inferred from a combinatorial surrogate.
 
 Model (Section 3 of the paper)
 ------------------------------

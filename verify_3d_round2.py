@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""verify_3d_round2.py -- supplementary checks for the revised manuscript (round 2).
+"""verify_3d_round2.py -- supplementary checks for the 3x3x3 DR Code paper.
 
 Adds to verify_3d_recovery.py / verify_3d_group.py, without modifying them:
 

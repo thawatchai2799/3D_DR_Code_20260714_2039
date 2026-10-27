@@ -7,9 +7,7 @@ Reproduces every numerical and structural claim in
 > T. Chomsiri and W. Sriphum,
 > *Generalizing DR Code to Three Dimensions: Combinatorial Structure,
 > Group-Theoretic Analysis, and Storage Implications of the 3x3x3 DR Code*,
-> Submitted to Symmetry (MDPI), Special Issue "Symmetry and Asymmetry in Computer Algorithms:
-> Properties and Applications". The manuscript was previously reviewed at Mathematics (MDPI)
-> as mathematics-4544390.
+> submitted to *Symmetry* (MDPI), 2026.
 
 ## Requirements
 
@@ -35,10 +33,10 @@ Combined runtime is about a minute. Each script compares every value it
 computes against the figure quoted in the paper, prints `OK` or `MISMATCH`
 for each, and exits with status 1 if anything fails to reproduce.
 
-## What changed in the second revision (round 2)
+## Additional checks (`verify_3d_round2.py`)
 
-`verify_3d_round2.py` adds the checks introduced in the second revision of the
-paper, without modifying the two original scripts:
+`verify_3d_round2.py` adds the following checks without modifying the two
+main scripts:
 
 | check | paper |
 |---|---|
@@ -54,34 +52,34 @@ stated in the paper and used by GAP; under this convention
 `sigma_Rz sigma_Cx sigma_Rz^-1 = sigma_Cy^2`. Under right-to-left composition the
 same identity reads `sigma_Rz sigma_Cx sigma_Rz^-1 = sigma_Cy`.
 
-## What changed in the major revision
+## Relation to `DR27.py`
 
-The submitted version of the paper defined a recoverable template by a
-*role-level* condition: every axis-parallel line carries one A-block, one
-B-block and one C-block. The third referee showed that this condition does not
-guarantee XOR recoverability. Recovery depends on the nine parity triples
-`G_r = {A_r, B_r, C_r}`, and a line labelled `A0, B0, C0` is role-balanced yet
-destroys the whole of `G_0` when erased. The revision replaces the model, and
-the scripts in this repository replace the enumerator that accompanied the
-submitted version.
+`DR27.py` is the original role-pattern enumerator for the 3x3x3 DR Code. It
+works at the *role level* only: it enumerates the 24 role patterns (Latin cubes
+of order 3) in which every axis-parallel line carries one A-block, one B-block
+and one C-block. That condition alone does not guarantee XOR recoverability.
+Recovery depends on the nine parity triples `G_r = {A_r, B_r, C_r}`: a line
+labelled `A0, B0, C0` is role-balanced yet destroys the whole of `G_0` when
+erased. The paper therefore works with the labelled-block model, and the
+verification scripts in this repository implement that model.
 
-| | submitted version | major revision |
+| | role-level model (`DR27.py`) | labelled-block model (the paper) |
 |---|---|---|
 | recoverability condition | every line carries each role once | the parity index is a bijection onto 0..8 on each of the nine slabs (Theorem 1) |
 | recoverable templates | 24 x (9!)^3 = 1,146,833,420,156,928,000 | 24 x 21 x 9! = **182,891,520** (Theorem 2) |
 | orbits under the symmetry group | 884,902,330,368,000 | **141,120** (Theorem 5) |
 | storage, flat index | 62 bits | **28 bits** |
 | verification of recovery | inferred from the combinatorics | every rod and slab erased and decoded |
-| enumerator released | `DR27.py` (role patterns only) | `verify_3d_recovery.py` and `verify_3d_group.py` |
+| script | `DR27.py` (role patterns only) | `verify_3d_recovery.py`, `verify_3d_group.py`, `verify_3d_round2.py` |
 
-The role-level results are unchanged and are retained: there are 24 role
-patterns (Latin cubes of order 3), the symmetry group is the semi-direct
-product `(C3 x C3 x C3) : O_h` of order 1,296, and the 24 role patterns form a
-single orbit with stabiliser of order 54.
+The role-level results are common to both models: there are 24 role patterns,
+the symmetry group is the semi-direct product `(C3 x C3 x C3) : O_h` of order
+1,296, and the 24 role patterns form a single orbit with stabiliser of order 54.
 
 `DR27.py` is kept in the repository for the record. It enumerates the 24 role
 patterns correctly, but it does not test recoverability and its count of
-`24 x (9!)^3` full templates should no longer be cited.
+`24 x (9!)^3` full templates is not a count of recoverable templates and should
+not be cited as one.
 
 ## What each script checks
 
@@ -97,7 +95,7 @@ The erasure model and the enumeration against it.
   random templates: the two agree on every one.
 - **Part 3** constructs an explicit DR-recoverable template, prints it, erases
   each of the 36 damage cases and decodes them all.
-- **Part 4** samples 20,000 templates drawn as the old Theorem 1 describes and
+- **Part 4** samples 20,000 templates that satisfy the role-level condition only and
   finds none that decodes all 36 cases.
 - **Part 5** counts the DR-recoverable templates by two unrelated methods,
   exact cover by parity transversals and a cell-pairing search, both giving
@@ -138,8 +136,8 @@ The role-level and group-theoretic results.
 |---|---|
 | `verify_3d_recovery.py` | erasure model, decoder, enumeration, orbits, storage |
 | `verify_3d_group.py` | role patterns, generators, group structure, Table 2, Burnside |
-| `DR27.py` | the role-pattern enumerator of the submitted version, kept for the record |
-| `verify_3d_round2.py` | checks added in the second revision: Corollary 1 template, 40 partitions of Remark 1, 27/21 for every role pattern, Appendix A certificate, 24 = 12 x 2 |
+| `DR27.py` | the original role-pattern enumerator (role level only), kept for the record |
+| `verify_3d_round2.py` | additional checks: Corollary 1 template, 40 partitions of Remark 1, 27/21 for every role pattern, Appendix A certificate, 24 = 12 x 2 |
 | `run_all.sh`, `run_all.bat` | run the three verification scripts in order |
 | `figures/` | the ten figures of the paper, each as a 600-dpi PNG and as a PDF (Figures 5, 6 and 9 are vector) |
 | `requirements.txt` | records that there are no dependencies |
@@ -148,8 +146,8 @@ The role-level and group-theoretic results.
 
 ## Figures
 
-The `figures/` directory holds the ten figures of the manuscript as submitted to
-Symmetry (manuscript file v21), named `Figure_01_cube` to `Figure_10_2D_vs_3D`.
+The `figures/` directory holds the ten figures of the manuscript submitted to
+*Symmetry*, named `Figure_01_cube` to `Figure_10_2D_vs_3D`.
 Every figure is provided as a 600-dpi PNG, identical to the image embedded in the
 manuscript, and as a PDF; Figures 5, 6 and 9 are vector PDFs produced by
 matplotlib, the others are the PNG embedded losslessly. Figures 5 and 6 were

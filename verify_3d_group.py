@@ -8,7 +8,7 @@ Reproduces every role-level and group-theoretic claim in
     T. Chomsiri and W. Sriphum,
     "Generalizing DR Code to Three Dimensions: Combinatorial Structure,
      Group-Theoretic Analysis, and Storage Implications of the 3x3x3 DR Code"
-    (Mathematics, manuscript mathematics-4471756, major revision)
+    (submitted to Symmetry, 2026).
 
 Everything is computed from first principles: the 27 cells of the cubic
 lattice, the 27 line constraints, and the nine generators of the symmetry
