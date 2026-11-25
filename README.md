@@ -7,7 +7,7 @@ Reproduces every numerical and structural claim in
 > T. Chomsiri and W. Sriphum,
 > *Generalizing DR Code to Three Dimensions: Combinatorial Structure,
 > Group-Theoretic Analysis, and Storage Implications of the 3x3x3 DR Code*,
-> submitted to *Symmetry* (MDPI), 2026.
+> submitted for publication, 2026.
 
 ## Requirements
 
@@ -153,12 +153,11 @@ The role-level and group-theoretic results.
 
 ## Figures
 
-The `figures/` directory holds the nine figures of the manuscript submitted to
-*Symmetry*, named `Figure_01_cube` to `Figure_09_storage`.
+The `figures/` directory holds the nine figures of the submitted manuscript, named `Figure_01_cube` to `Figure_09_storage`.
 Every figure is provided as a 600-dpi PNG, identical to the image embedded in the
 manuscript, and as a PDF; Figures 5, 6 and 9 are vector PDFs produced by
 matplotlib (as is Figure 8), the others are the PNG embedded losslessly. Figures 5 and 6 were
-redrawn for the Symmetry submission so that all block diagrams share one
+redrawn for the submitted version so that all block diagrams share one
 style (role colours A blue, B red, C green; erased blocks grey); their content
 is unchanged.
 
